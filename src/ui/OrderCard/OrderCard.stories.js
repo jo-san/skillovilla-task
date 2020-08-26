@@ -10,8 +10,3 @@ export default {
 const Template = (args) => <OrderCard {...args} />;
 
 export const BasicText = Template.bind({});
-BasicText.args = {
-    label: 'Name',
-    type: 'text',
-    placeholder: 'Type your name here'
-};

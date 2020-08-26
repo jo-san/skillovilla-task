@@ -13,6 +13,7 @@ const CardWrapper = styled.div`
     display: flex;
     min-height: 100px;
     flex-direction: column;
+    margin-bottom: 12px;
 
     :hover {
         background-color: ${theme.greyLighter};    
@@ -64,6 +65,7 @@ const Price = styled.p`
 const SubText = styled.div`
     font-weight: ${theme.light};
     color: ${theme.gray};
+    font-size: ${theme.mini};
 
     span {
         :not(:last-child) {

@@ -14,6 +14,7 @@ const CardWrapper = styled.div`
     display: flex;
     min-height: 100px;
     flex-direction: column;
+    margin-bottom: 12px;
 `;
 
 const CardBody = styled.div`

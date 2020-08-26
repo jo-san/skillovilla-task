@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 
 import { theme } from '../theme';
@@ -9,6 +9,10 @@ const Wrapper = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+
+    h2 {
+        margin-top: 0;
+    }
 `;
 
 const NavItem = styled.li`
@@ -59,9 +63,13 @@ const NavItem = styled.li`
     `}
 `;
 
-const SideNav = () => {
-    const [active, setActive] = React.useState(0);
+const SideNav = ({ setActiveTab }) => {
+    const [active, setActive] = useState(0);
 
+    useEffect(() => {
+        setActiveTab(active);
+    },[active]);
+    
     const menuItems = ['Profile Details', 'Order History'];
     const menuIcons = [<Menu key={0} />, <Phone key={1} />];
 

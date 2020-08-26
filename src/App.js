@@ -1,21 +1,34 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import { Header } from './ui/Header';
+import { md, lg } from './ui/breakpoints';
+
+import Dashboard from './views/Dashboard';
+
+const AppConatiner = styled.div`
+  width: calc(100% - 24px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 12px;
+
+  ${md} {
+    width: 992px;
+  }
+  
+  ${lg} {
+    width: 1176px;
+  }
+`;
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppConatiner>
+        <Header />
+
+        <Dashboard />
+      </AppConatiner>
     </div>
   );
 }

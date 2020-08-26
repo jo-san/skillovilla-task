@@ -26,6 +26,7 @@ const Input = styled.input`
     background-color: ${theme.white};
     border: 1px solid #E5E5E5;
     background-image: none;
+    box-sizing: border-box;
     
     outline: 0 none;
     height: auto;
@@ -36,6 +37,7 @@ const Input = styled.input`
     background-clip: padding-box;
     font-size: 15px;
     line-height: 1.2;
+    width: 100%;
 
     transition: all 0.3s;
 
